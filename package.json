@@ -1,0 +1,19 @@
+{
+  "name": "WeatherApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . WeatherApp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.6",
+    "electron-packager": "^13.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

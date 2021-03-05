@@ -1,0 +1,105 @@
+/*  GLOBAL  */
+
+div {
+    font: 20px arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
+}
+
+#textarea {
+    margin-left: 9%;
+    color: black;
+    border: 0;
+    background-color: rgba(255,255,255,0.5);
+    outline: transparent;
+}
+
+
+#searchBtn {
+    font-size: 14px;
+    color: black;
+    margin-left: -18px;
+}
+
+body {
+    background-image: url("../pics/allweather.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: rgba(255,255,255,1);
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+
+/*  Current Weather  */
+div.container-left {
+    display: inline-block;
+    float: left;
+    width: 33%;
+}
+
+#city {
+    margin-bottom: 10%;
+}
+
+#temp {
+    font-size: 40px;
+    margin-left: 5%;
+}
+
+#date {
+    margin-left: 5%;
+}
+
+
+div.container-middle {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    margin-top: 6%;
+}
+
+#temp_max {
+    color: red;
+    margin-left: -28%;
+}
+
+#temp_min {
+    color: blue;
+    margin-left: -28%;
+}
+
+div.container-right {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    margin-top: 4%;
+}
+
+#conditions {
+}
+
+
+/*  FORECAST  */
+.container-bottom {
+    width: 100%;
+    margin-top: 35%;
+    margin-left: 1%;
+}
+
+.day1,.day2,.day3,.day4 {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#day1_date,#day2_date,#day3_date,#day4_date {
+    margin-bottom: 10px;
+}
+
+#day1_desc,#day2_desc,#day3_desc,#day4_desc {
+    margin-bottom: 5px;
+}
