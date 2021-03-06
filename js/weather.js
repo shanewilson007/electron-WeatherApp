@@ -1,4 +1,4 @@
-// GLOBAL //
+const fs = require('fs');
 
 $("#textarea").keydown(function(){
     if (event.keyCode == 13){
@@ -23,7 +23,9 @@ function getdate() {
 }
 
 function weatherfetch(){
-    var api_key = 'bc1b7157c79434068d3e1725fd1504ed';
+    const APIKey = fs.readFileSync('/home/shane/dev/apikeys/apikey.txt').toString()
+    console.log(APIKey);
+    var api_key = APIKey;
     var city = $('#textarea').val();
     var url1 = 'https://api.openweathermap.org/data/2.5/weather?q='+city;
     var url2 = ',us&units=imperial&appid='+api_key;
@@ -31,6 +33,7 @@ function weatherfetch(){
         dataType: 'json',
         url: url1+url2,
         success: function(result,status,xhr){
+          console.log(result);
             var city = result['name'];
             var temp = Math.round(result['main']['temp']);
             var temp_max = Math.round(result['main']['temp_max']);
