@@ -1,7 +1,8 @@
 const fs = require('fs');
+const APIKey = fs.readFileSync('/home/shane/dev/apikeys/apikey.txt').toString()
 
 $("#textarea").keydown(function(){
-    if (event.keyCode == 13){
+    if (event.keyCode == 14){
         weatherfetch();
         forecastfetch();
     }
@@ -23,8 +24,6 @@ function getdate() {
 }
 
 function weatherfetch(){
-    const APIKey = fs.readFileSync('/home/shane/dev/apikeys/apikey.txt').toString()
-    console.log(APIKey);
     var api_key = APIKey;
     var city = $('#textarea').val();
     var url1 = 'https://api.openweathermap.org/data/2.5/weather?q='+city;
